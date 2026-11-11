@@ -426,8 +426,10 @@ $('#nowPane').addEventListener('click',e=>{const s=e.target.closest('[data-set]'
 
 /* ============ MINE ============ */
 function encodeFavs(set){return 'TMLTH:'+[...set].map(id=>{const s=SETBYID[id];return DAYS.findIndex(d=>d.id===s.day)+''+STAGES.findIndex(x=>x.id===s.stage)+id.split('.')[2];}).join('-');}
-function decodeFavs(str){const m=String(str).match(/TMLTH:([0-9\-]+)/);if(!m)return null;const out=new Set();
-  for(const c of m[1].split('-')){if(c.length<3)continue;const d=DAYS[+c[0]],s=STAGES[+c[1]];if(!d||!s)continue;const id=d.id+'.'+s.id+'.'+c.slice(2);if(SETBYID[id])out.add(id);}return out;}
+function decodeFavs(str){let t=String(str||'');try{t=t.normalize('NFKC');}catch(e){}
+  const m=t.match(/tmlth\s*:\s*([0-9][0-9\s\-\u2010-\u2015\u2212]*)/i)||t.trim().match(/^([0-9]{3,}(?:[\s\-\u2010-\u2015\u2212]+[0-9]{3,})*)$/);
+  if(!m)return null;const out=new Set();
+  for(const c of m[1].split(/[^0-9]+/)){if(c.length<3)continue;const d=DAYS[+c[0]],s=STAGES[+c[1]];if(!d||!s)continue;const id=d.id+'.'+s.id+'.'+parseInt(c.slice(2),10);if(SETBYID[id])out.add(id);}return out;}
 function renderMine(){
   let h='';
   if(!favs.size&&!partner.size)h+=`<div class="empty">${T('mine_empty')}</div>`;
@@ -449,7 +451,7 @@ function renderMine(){
     <div class="small" style="line-height:1.6">${esc(T('sync_desc'))}</div>
     <div class="row" style="margin-top:10px;gap:8px;flex-wrap:wrap"><button class="btn sm primary" id="copyMine">${esc(T('copy_mine'))}</button>
     <span class="small muted">${esc(T('partner_name'))}</span><input type="text" id="pname" value="${esc(partnerName)}" placeholder="${esc(T('partner_default'))}" style="width:110px;padding:6px 10px;font-size:13px"></div>
-    <textarea id="importBox" placeholder="${esc(T('import_ph'))}" style="margin-top:10px"></textarea>
+    <textarea id="importBox" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" placeholder="${esc(T('import_ph'))}" style="margin-top:10px"></textarea>
     <div class="row" style="margin-top:8px;gap:8px;flex-wrap:wrap"><button class="btn sm gold" id="doImport">${esc(T('do_import'))}</button>
     ${partner.size?`<button class="btn sm" id="clrPartner">${esc(T('clr_partner'))}</button>`:''}${favs.size?`<button class="btn sm" id="clrMine">${esc(T('clr_mine'))}</button>`:''}</div></div>
     <div class="note">${esc(T('local_note'))}</div>`;
