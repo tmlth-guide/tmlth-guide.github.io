@@ -7,6 +7,7 @@ Tomorrowland Thailand 2026 — Offline Timetable / 離線行程表
   4. 日本語
   5. 한국어
   6. Español
+  7. ไทย
 
 Files / 檔案: index.html, sw.js, manifest.json, icon.png
 
@@ -17,7 +18,7 @@ Files / 檔案: index.html, sw.js, manifest.json, icon.png
 
 這是什麼
   Tomorrowland Thailand 2026（12/11–12/13，芭達雅）的互動式行程表，
-  含 DJ 介紹與曲風說明，支援 6 國語言（右上角地球圖示切換），
+  含 DJ 介紹與曲風說明，支援 7 國語言（右上角地球圖示切換），
   在會場沒有網路也能使用。
 
 【一、部署（只需要做一次）】
@@ -29,7 +30,7 @@ Files / 檔案: index.html, sw.js, manifest.json, icon.png
 【二、裝到手機（每支手機各做一次，需要網路）】
   iPhone：
     1. 用 Safari 打開網址（不要用 LINE、IG 內建的瀏覽器）
-    2. 點下方「分享」→「加入主畫面」
+    2. 點下方「分享」（新版 iOS 在「•••」裡）→「加入主畫面」
     3. 從主畫面的圖示打開一次，讓資料存進手機
   Android：
     1. 用 Chrome 打開網址
@@ -58,7 +59,7 @@ Files / 檔案: index.html, sw.js, manifest.json, icon.png
 
 这是什么
   Tomorrowland Thailand 2026（12/11–12/13，芭提雅）的交互式时间表，
-  含 DJ 介绍与曲风说明，支持 6 种语言（右上角地球图标切换），
+  含 DJ 介绍与曲风说明，支持 7 种语言（右上角地球图标切换），
   在现场没有网络也能使用。
 
 【一、部署（只需要做一次）】
@@ -99,7 +100,7 @@ Files / 檔案: index.html, sw.js, manifest.json, icon.png
 
 What this is
   An interactive timetable for Tomorrowland Thailand 2026 (Dec 11–13, Pattaya)
-  with DJ bios and genre guides, in 6 languages (switch with the globe icon
+  with DJ bios and genre guides, in 7 languages (switch with the globe icon
   at the top right). It works with no internet at the festival.
 
 [1. Deploy (once)]
@@ -145,7 +146,7 @@ What this is
 
 これは何？
   Tomorrowland Thailand 2026（12/11〜12/13、パタヤ）のインタラクティブな
-  タイムテーブルです。DJ紹介とジャンル解説つきで、6か国語に対応
+  タイムテーブルです。DJ紹介とジャンル解説つきで、7か国語に対応
   （右上の地球アイコンで切り替え）。会場でネットがなくても使えます。
 
 【1. 公開する（最初の1回だけ）】
@@ -190,7 +191,7 @@ What this is
 
 이게 뭔가요?
   Tomorrowland Thailand 2026(12/11–12/13, 파타야)의 인터랙티브 타임테이블이에요.
-  DJ 소개와 장르 설명이 들어 있고, 6개 언어를 지원해요(오른쪽 위 지구 아이콘으로
+  DJ 소개와 장르 설명이 들어 있고, 7개 언어를 지원해요(오른쪽 위 지구 아이콘으로
   전환). 현장에서 인터넷이 안 돼도 쓸 수 있어요.
 
 【1. 배포하기 (한 번만)】
@@ -235,7 +236,7 @@ What this is
 
 ¿Qué es esto?
   Un horario interactivo de Tomorrowland Thailand 2026 (11–13 dic, Pattaya)
-  con biografías de DJs y guía de géneros, en 6 idiomas (cambia con el icono
+  con biografías de DJs y guía de géneros, en 7 idiomas (cambia con el icono
   del globo arriba a la derecha). Funciona sin internet en el festival.
 
 [1. Publicar (una sola vez)]
@@ -276,3 +277,48 @@ What this is
     oficial y pueden variar ±10 minutos. Consulta los avisos en el recinto.
   - Tus elecciones solo se guardan en el navegador de tu propio móvil.
     Si borras los datos del navegador, se pierden.
+
+
+=============================================================
+7. ไทย
+=============================================================
+
+นี่คืออะไร
+  ตารางเวลาแบบอินเทอร์แอกทีฟของ Tomorrowland Thailand 2026 (11–13 ธ.ค., พัทยา)
+  พร้อมข้อมูลดีเจและคู่มือแนวเพลง รองรับ 7 ภาษา (สลับได้ที่ไอคอนลูกโลกมุมขวาบน)
+  ใช้งานได้แม้ไม่มีอินเทอร์เน็ตในงาน
+
+[1. เผยแพร่ (ทำครั้งเดียว)]
+  อัปโหลดไฟล์ 4 ไฟล์ในโฟลเดอร์นี้ไปยังโฮสติ้งเว็บแบบสแตติกที่รองรับ HTTPS เช่น:
+  - Netlify Drop (เร็วที่สุด): เปิด app.netlify.com/drop แล้วลากโฟลเดอร์เข้าไป
+    จะได้ลิงก์ทันที
+  - GitHub Pages หรือ Cloudflare Pages ก็ได้
+  หมายเหตุ: ลิงก์ต้องเป็น HTTPS ไม่อย่างนั้นโหมดออฟไลน์จะไม่ทำงาน
+
+[2. ติดตั้งลงมือถือ (ทำครั้งเดียวต่อเครื่อง ต้องใช้อินเทอร์เน็ต)]
+  iPhone:
+    1. เปิดลิงก์ด้วย Safari (ไม่ใช่เบราว์เซอร์ในแอปอย่าง LINE)
+    2. แตะ «แชร์» ด้านล่าง (iOS รุ่นใหม่อยู่ใน «•••») → «เพิ่มไปยังหน้าจอโฮม»
+    3. เปิดจากไอคอนบนหน้าจอโฮมหนึ่งครั้ง เพื่อให้ข้อมูลถูกบันทึก
+  Android:
+    1. เปิดลิงก์ด้วย Chrome
+    2. แตะ «⋮» มุมขวาบน → «เพิ่มลงในหน้าจอหลัก» หรือ «ติดตั้งแอป»
+    3. เปิดจากไอคอนบนหน้าจอหลักหนึ่งครั้ง
+
+  หลังจากนั้น เปิดจากหน้าจอโฮมได้แม้ไม่มีอินเทอร์เน็ต
+
+[3. การอัปเดต]
+  ถ้ามีการอัปโหลดเวอร์ชันใหม่ ให้เปิดแอปหนึ่งครั้งตอนมีอินเทอร์เน็ต ระบบจะอัปเดตเอง
+  แนะนำให้เปิดอีกครั้งด้วย Wi-Fi ที่โรงแรมก่อนไปงาน
+
+[ใช้ Android อย่างเดียว]
+  สามารถบันทึก index.html ลงมือถือแล้วเปิดด้วย Chrome ได้เลย ใช้แบบออฟไลน์ได้เหมือนกัน
+  (บน iPhone ถ้าแตะไฟล์ .html ในแอป «ไฟล์» จะเป็นแค่ภาพตัวอย่าง ฟังก์ชันต่าง ๆ ใช้ไม่ได้
+  กรุณาใช้วิธีด้านบน)
+
+[ควรรู้]
+  - เวลาทั้งหมดเป็นเวลาประเทศไทย (UTC+7)
+  - เวลาของเมนสเตจประเมินจากภาพทางการ อาจคลาดเคลื่อน ±10 นาที
+    โปรดตรวจสอบประกาศหน้างาน
+  - รายการที่เลือกเก็บไว้ในเบราว์เซอร์ของมือถือตัวเองเท่านั้น
+    ถ้าล้างข้อมูลเบราว์เซอร์ รายการจะหายไปด้วย
